@@ -7,14 +7,23 @@
 - `cat`
 - `cd`
 - `pwd`
+<<<<<<< HEAD
 - `ls [-l]`
 - `clear`
+=======
+- `ls [-l]` / `dir`
+- `clear` / `cls`
+>>>>>>> 8882ef9 (Add TP1)
 - `mkdir` / `rmdir`
 - `rm`
 - `touch`
 
+<<<<<<< HEAD
 Attention, les commandes varient selon le terminal : bash (linux ou git bash) / Windows CMD / PowerShell...
 Nous vous conseillons d'utiliser **git bash**.
+=======
+Les commandes varient selon le terminal : bash (linux ou git bash) / Windows CMD / PowerShell...
+>>>>>>> 8882ef9 (Add TP1)
 
 Pour s'entrainer, exécutez les commandes suivantes :
 ```shell
@@ -39,11 +48,16 @@ rm hello.txt
 exit
 ```
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8882ef9 (Add TP1)
 ## Partie 2 : exercices en python
 
 **Tout au long du TP :**
 - effectuer chaque exercice dans un fichier python séparé
 - suivre les conventions de la [PEP8](https://peps.python.org/pep-0008/)
+<<<<<<< HEAD
 - suivre les principes du code propre vus en cours, en particulier pour les derniers exercices :
   - nommage des variables / fonctions...
   - bonne utilisation des commentaires
@@ -52,6 +66,12 @@ exit
   - ajouter des annotations de type
   - éviter les duplications de code (DRY)
   - séparation des responsabilités
+=======
+- suivre les principes du code propre vues en cours, en particulier pour les derniers exercices :
+  - nommage des variables / fonctions...
+  - séparation des responsabilités
+  - ...
+>>>>>>> 8882ef9 (Add TP1)
 
 ### 1. Devine le nombre
 
@@ -63,7 +83,11 @@ L'utilisateur propose un nombre. l'ordinateur lui dit s'il est trop petit ou tro
 
 Ecrire un programme qui demande le nom d'un fichier .txt à l'utilisateur. Le fichier devra se trouver dans le même dossier que le script Python.
 Le programme devra compter le nombre de fois que le mot "python" est écrit dans le fichier et l'afficher à l'écran. En cas d'échec de lecture du fichier saisi par l'utilisateur, le programme demande à l'utilisateur une nouvelle saisie (maximum 3 essais). Au bout de trois tentatives infructueuses, le programme affiche un message d'erreur et quitte.
+<<<<<<< HEAD
 Comme exemple, vous pourrez copier-coller un morceau de n'importe quelle documentation de python dans un fichier texte.
+=======
+Comme exemple, vous pourrez copier-coller un morcreau de n'importe quelle documentation de python dans un fichier texte.
+>>>>>>> 8882ef9 (Add TP1)
 
 ### 3. Fizz Buzz
 
@@ -73,6 +97,7 @@ Ecrire une fonction qui prend un nombre entier en paramètre, et qui doit retour
 - "fizz buzz" si le nombre est divisible par 3 et 5
 - le nombre donné en paramètre s'il n'est divisible par ni 3 ni 5
 
+<<<<<<< HEAD
 ### 4. Récursion
 
 Ecrire un programme qui utilise la récursion (une fonction qui s'appelle elle-même) pour calculer la somme jusqu'au n-ième terme de la série harmonique.
@@ -83,6 +108,9 @@ harmonic_sum(n=4)  # doit retourner 1 + (1 / 2) + (1 / 3) + (1 / 4)
 ```
 
 ### 5. ZCasino
+=======
+### 4. ZCasino
+>>>>>>> 8882ef9 (Add TP1)
 
 Règles du jeu :
 - Le joueur choisi un nombre sur la roulette (entre 0 et 49) et mise une somme d'argent sur ce nombre
@@ -103,11 +131,19 @@ Créer un package constitué de plusieurs modules. Par exemple:
 - un module contenant des fonctions utilie au déroulement du jeu
 - un module contenant la fonction principale du jeu
 
+<<<<<<< HEAD
 ### 6. Météo
 
 Le but de cet exercice est d'afficher des données météorologiques à l'utilisateur concernant la ville de son choix.
 Le programme devra demander une ville à l'utilisateur. Une fois saisie, récupérer des données comme la température, l'humidité, la vitesse du vent etc, de la ville et les afficher à l'utilisateur.
 Si la récupération des données échoue, afficher un message invitant l'utilisateur à réessayer plus tard. Pour tester cela, vous pouvez couper internet.
+=======
+### 5. Météo
+
+Le but de cet exercice est d'afficher des données météorologiques à l'utilisateur concernant la ville de son choix.
+Le programme devra demander une ville à l'utilisateur. Une fois saisie, récupérer des données comme la température, l'humidité, la vitesse du vent etc, de la ville et les afficher à l'utilisateur.
+Si la récupération des données échoue, afficher un message invitant l'utilisateur à réessayer plus tard.
+>>>>>>> 8882ef9 (Add TP1)
 
 Détails :
 - Pour effectuer des requêtes HTTP, il vous faudra installer [requests](https://pypi.org/project/requests/)
@@ -116,7 +152,11 @@ Détails :
 
 ## Partie 3 : utilisation d'un linter et d'un formatter formatter
 
+<<<<<<< HEAD
 1. installer ``black`` et `flake8` avec `pip`
+=======
+1. installer black et flake8 avec pip
+>>>>>>> 8882ef9 (Add TP1)
 2. Executer black et flake8 sur le code écrit durant le TP
 
 Documentations:

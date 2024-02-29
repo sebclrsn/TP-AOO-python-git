@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TP2 - Utiliser Git avec GitHub
 
 ## Objectifs de ces travaux pratiques
@@ -130,3 +131,8 @@ de l'orientation de la centrale inertielle en degrés selon les 3 axes (angles d
 
 Il faudra alors calculer l'intégrale de la vitesse angulaire. On pourra utiliser une méthode
 d'intégration numérique telle que la méthode des rectangles.
+=======
+# Projet
+
+TODO
+>>>>>>> 8882ef9 (Add TP1)
