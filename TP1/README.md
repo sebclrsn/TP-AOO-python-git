@@ -116,7 +116,6 @@ Détails :
 
 ## Partie 3 : utilisation d'un linter et d'un formatter formatter
 
-
 1. installer ``black`` et ``flake8`` avec ``pip``
 2. Executer black et flake8 sur le code écrit durant le TP
 
