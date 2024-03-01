@@ -7,13 +7,14 @@
 - `cat`
 - `cd`
 - `pwd`
-- `ls [-l]` / `dir`
-- `clear` / `cls`
+- `ls [-l]`
+- `clear`
 - `mkdir` / `rmdir`
 - `rm`
 - `touch`
 
-Les commandes varient selon le terminal : bash (linux ou git bash) / Windows CMD / PowerShell...
+Attention, les commandes varient selon le terminal : bash (linux ou git bash) / Windows CMD / PowerShell...
+Nous vous conseillons d'utiliser **git bash**.
 
 Pour s'entrainer, exécutez les commandes suivantes :
 ```shell
@@ -103,7 +104,7 @@ Détails :
 
 ## Partie 3 : utilisation d'un linter et d'un formatter formatter
 
-1. installer ``black`` et ``flake8`` avec ``pip``
+1. installer ``black`` et `flake8` avec `pip`
 2. Executer black et flake8 sur le code écrit durant le TP
 
 Documentations:
