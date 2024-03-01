@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TP3 - Orienté Objet
 
 ## Exercices 1
@@ -122,8 +121,3 @@ counter3_thread = Counter(20)  # count from 0 to 20 with 1s delay (1s is the def
 ```
 
 Vous devrez pour cela *overrider* la méthode `__init__`. Pensez à appeler `super()__init__()`.
-=======
-# Projet
-
-TODO
->>>>>>> 8882ef9 (Add TP1)
