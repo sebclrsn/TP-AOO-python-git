@@ -70,7 +70,16 @@ Ecrire une fonction qui prend un nombre entier en paramètre, et qui doit retour
 - "fizz buzz" si le nombre est divisible par 3 et 5
 - le nombre donné en paramètre s'il n'est divisible par ni 3 ni 5
 
-### 4. ZCasino
+### 4. Récursion
+
+Ecrire un programme qui utilise la récursion (une fonction qui s'appelle elle-même) pour calculer la somme jusqu'au n-ième terme de la série harmonique.
+La série harmonique est la suite des inverses des entiers strictement positifs: `1 + (1 / 2) + (1 / 3) + .. + (1 / n)`.
+Example pour N=4:
+```py
+harmonic_sum(n=4)  # doit retourner 1 + (1 / 2) + (1 / 3) + (1 / 4)
+```
+
+### 5. ZCasino
 
 Règles du jeu :
 - Le joueur choisi un nombre sur la roulette (entre 0 et 49) et mise une somme d'argent sur ce nombre
@@ -91,7 +100,7 @@ Créer un package constitué de plusieurs modules. Par exemple:
 - un module contenant des fonctions utilie au déroulement du jeu
 - un module contenant la fonction principale du jeu
 
-### 5. Météo
+### 6. Météo
 
 Le but de cet exercice est d'afficher des données météorologiques à l'utilisateur concernant la ville de son choix.
 Le programme devra demander une ville à l'utilisateur. Une fois saisie, récupérer des données comme la température, l'humidité, la vitesse du vent etc, de la ville et les afficher à l'utilisateur.
