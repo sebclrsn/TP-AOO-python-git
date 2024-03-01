@@ -59,7 +59,7 @@ L'utilisateur propose un nombre. l'ordinateur lui dit s'il est trop petit ou tro
 
 Ecrire un programme qui demande le nom d'un fichier .txt à l'utilisateur. Le fichier devra se trouver dans le même dossier que le script Python.
 Le programme devra compter le nombre de fois que le mot "python" est écrit dans le fichier et l'afficher à l'écran. En cas d'échec de lecture du fichier saisi par l'utilisateur, le programme demande à l'utilisateur une nouvelle saisie (maximum 3 essais). Au bout de trois tentatives infructueuses, le programme affiche un message d'erreur et quitte.
-Comme exemple, vous pourrez copier-coller un morcreau de n'importe quelle documentation de python dans un fichier texte.
+Comme exemple, vous pourrez copier-coller un morceau de n'importe quelle documentation de python dans un fichier texte.
 
 ### 3. Fizz Buzz
 
