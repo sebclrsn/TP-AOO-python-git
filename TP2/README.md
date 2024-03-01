@@ -1,3 +1,3 @@
-# Projet
+# TP2 - Git
 
 TODO
