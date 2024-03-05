@@ -39,16 +39,19 @@ rm hello.txt
 exit
 ```
 
-
 ## Partie 2 : exercices en python
 
 **Tout au long du TP :**
 - effectuer chaque exercice dans un fichier python séparé
 - suivre les conventions de la [PEP8](https://peps.python.org/pep-0008/)
-- suivre les principes du code propre vues en cours, en particulier pour les derniers exercices :
+- suivre les principes du code propre vus en cours, en particulier pour les derniers exercices :
   - nommage des variables / fonctions...
+  - bonne utilisation des commentaires
+  - pas de "magic value"
+  - ajouter des docstrings
+  - ajouter des annotations de type
+  - éviter les duplications de code (DRY)
   - séparation des responsabilités
-  - ...
 
 ### 1. Devine le nombre
 
@@ -104,7 +107,7 @@ Créer un package constitué de plusieurs modules. Par exemple:
 
 Le but de cet exercice est d'afficher des données météorologiques à l'utilisateur concernant la ville de son choix.
 Le programme devra demander une ville à l'utilisateur. Une fois saisie, récupérer des données comme la température, l'humidité, la vitesse du vent etc, de la ville et les afficher à l'utilisateur.
-Si la récupération des données échoue, afficher un message invitant l'utilisateur à réessayer plus tard.
+Si la récupération des données échoue, afficher un message invitant l'utilisateur à réessayer plus tard. Pour tester cela, vous pouvez couper internet.
 
 Détails :
 - Pour effectuer des requêtes HTTP, il vous faudra installer [requests](https://pypi.org/project/requests/)
