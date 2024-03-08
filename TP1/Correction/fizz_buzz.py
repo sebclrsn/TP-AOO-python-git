@@ -21,5 +21,6 @@ def main() -> None:
     number = utils.get_int_from_user("Enter any number: ")
     print(fizz_buzz(number))
 
+
 if __name__ == "__main__":
     main()

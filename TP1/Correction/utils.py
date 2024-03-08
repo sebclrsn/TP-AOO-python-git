@@ -10,7 +10,7 @@ def get_int_from_user(
     prompt_msg: str,
     value_min: int | None = None,
     value_max: int | None = None,
-    max_attempts: int = 2
+    max_attempts: int = 2,
 ) -> int:
     """Ask the user to enter a number in the console within the valid range if a range is provided.
     Will raise a ValueError if the user enters an input that cannot be converted to an integer
@@ -26,14 +26,14 @@ def get_int_from_user(
         if user_input_as_float != user_input_as_int:
             print(f"{user_input} is invalid: please enter a non-floating point number")
             continue
-        
+
         if value_min is not None and value_min > user_input_as_int:
             print(f"{user_input_as_int} has to be greater than {value_min}")
             continue
         if value_max is not None and value_max < user_input_as_int:
             print(f"{user_input_as_int} has to be smaller than {value_max}")
             continue
-    
+
         return user_input_as_int
 
     raise ValueError("User input cannot be converted to an integer")

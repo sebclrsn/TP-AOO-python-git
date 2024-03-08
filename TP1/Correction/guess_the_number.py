@@ -21,7 +21,6 @@ def choose_number_to_guess(lower_limit: int, upper_limit: int) -> int:
     return random.randint(lower_limit, upper_limit)
 
 
-
 def main() -> None:
     """Entry point for the game"""
     print(generate_rules(NUMBER_TO_GUESS_MIN, NUMBER_TO_GUESS_MAX))
@@ -32,11 +31,11 @@ def main() -> None:
         if player_guess == number_to_guess:
             print("Correct!")
             return
-        
+
         if player_guess < number_to_guess:
             print("Your number is too low")
         else:
-            print("Your number is too high")    
+            print("Your number is too high")
 
 
 if __name__ == "__main__":
