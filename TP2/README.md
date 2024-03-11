@@ -52,7 +52,7 @@ Ce sera votre espace de travail pour la suite de ce TP.
 
 ## 3. Travaillez ensemble sur le même fichier
 
-Ce TP vise à manipuler un [fichier de données](/data/sensor_data.csv) contenant des données temporelle des mesures d'une centrale inertielle.
+Ce TP vise à manipuler un [fichier de données](/TP2/data/sensor_data.csv) contenant des données temporelle des mesures d'une centrale inertielle.
 
 Ce fichier est au format CSV (Comma-Separated Values, valeurs séparées par virgules) et contient, dans l'ordre:
 - le temps en secondes
@@ -61,11 +61,11 @@ Ce fichier est au format CSV (Comma-Separated Values, valeurs séparées par vir
 - les mesures d'intensité des champs magnétiques selon les axes du repère de la centrale inertielle en uT (micro Tesla, ces mesures ne feront pas l'objet d'une étude pendant ce TP).
 
 Ce dépôt contient un dossier "code" ou vous trouverez plusieurs modules Python:
-- un [module pour la lecture des données d'entrée](/imu_analysis/reader.py) en format CSV
-- un [module pour la visualisation des données](/imu_analysis/plotting.py) utilisant la bibliothèque
+- un [module pour la lecture des données d'entrée](/TP2/imu_analysis/reader.py) en format CSV
+- un [module pour la visualisation des données](/TP2/imu_analysis/plotting.py) utilisant la bibliothèque
 [matplotlib](https://matplotlib.org/stable/)
-- un [module pour le traitement des données](/imu_analysis/processing.py), auquel vous ajouterez des fonctionnalités
-- un [module de point d'entrée](/imu_analysis/main.py) qui utilise les 3 derniers modules pour lire, traiter et visualiser les données.
+- un [module pour le traitement des données](/TP2/imu_analysis/processing.py), auquel vous ajouterez des fonctionnalités
+- un [module de point d'entrée](/TP2/imu_analysis/main.py) qui utilise les 3 derniers modules pour lire, traiter et visualiser les données.
 
 
 ## 4. Contribuez au projet
