@@ -26,7 +26,7 @@ from typing import Iterator
 ImuData = namedtuple("ImuData", ["t", "wx", "wy", "wz", "ax", "ay", "az"])
 
 
-SAMPLE_DATA_PATH = Path(__file__).parent.parent / "data/sensor_data.csv"
+SAMPLE_DATA_PATH = Path(__file__).parent.parent / "data" / "sensor_data.csv"
 
 
 def read_measurements_file(
