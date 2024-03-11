@@ -67,6 +67,12 @@ Ce dépôt contient un dossier "code" ou vous trouverez plusieurs modules Python
 - un [module de point d'entrée](/TP2/imu_analysis/main.py) qui utilise les 3 derniers modules pour lire, traiter et visualiser les données.
 
 
+Vous pouvez exécuter le programme avec la commande suivante:
+
+```bash
+python ./TP2/imu_analysis/main.py
+```
+
 ## 4. Contribuez au projet
 
 ### 4.1. Lissage des signaux de mesure
@@ -78,7 +84,7 @@ On définira la moyenne glissante comme:
 > $\bar{x}_n = \frac{1}{N} \sum_{k=n}^{n + N} x_{n-k}$
 
 où:
-- $\bar{x_n}$ désigne la moyenne glissante du n-ième terme
+- $\bar{x}_n$ désigne la moyenne glissante du n-ième terme
 - $N$ désigne la fenêtre de la moyenne glissante (représentée par le paramètre ``interval``)
 
 Pour vérifier le bon fonctionnement de la fonction, on pourra la tester avec les valeurs suivantes:
@@ -86,9 +92,9 @@ Pour vérifier le bon fonctionnement de la fonction, on pourra la tester avec le
 - ``n = 4``
 
 On s'attendra alors à obtenir comme valeur de retour ``[1.5, 2.5, 3.5, 4.5, 5.5, 6.5]`` car:
-- $\bar{x_0} = \frac{1}{4} \cdot (0 + 1 + 2 + 3)$
-- $\bar{x_1} = \frac{1}{4} \cdot (1 + 2 + 3 + 4)$
-- $\bar{x_2} = \frac{1}{4} \cdot (2 + 3 + 4 + 5)$
+- $\bar{x}_0 = \frac{1}{4} \cdot (0 + 1 + 2 + 3)$
+- $\bar{x}_1 = \frac{1}{4} \cdot (1 + 2 + 3 + 4)$
+- $\bar{x}_2 = \frac{1}{4} \cdot (2 + 3 + 4 + 5)$
 
 ### 4.2. Visualisation du signal lissé
 

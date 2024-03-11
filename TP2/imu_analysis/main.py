@@ -3,6 +3,14 @@ from reader import read_measurements_file
 
 
 def main():
+    """Fonction principale du projet.
+
+    Cette fonction va:
+    - lire le fichier de mesures et en extraire les données
+    - lisser les données (A AJOUTER)
+    - créer les graphes des données
+    - afficher les graphes créés.
+    """
     t = []
     wx = []
     wy = []
