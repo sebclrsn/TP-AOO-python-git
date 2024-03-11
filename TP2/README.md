@@ -62,8 +62,7 @@ Ce fichier est au format CSV (Comma-Separated Values, valeurs séparées par vir
 
 Ce dépôt contient un dossier "code" ou vous trouverez plusieurs modules Python:
 - un [module pour la lecture des données d'entrée](/TP2/imu_analysis/reader.py) en format CSV
-- un [module pour la visualisation des données](/TP2/imu_analysis/plotting.py) utilisant la bibliothèque
-[matplotlib](https://matplotlib.org/stable/)
+- un [module pour la visualisation des données](/TP2/imu_analysis/plotting.py) utilisant la bibliothèque [matplotlib](https://matplotlib.org/stable/)
 - un [module pour le traitement des données](/TP2/imu_analysis/processing.py), auquel vous ajouterez des fonctionnalités
 - un [module de point d'entrée](/TP2/imu_analysis/main.py) qui utilise les 3 derniers modules pour lire, traiter et visualiser les données.
 
