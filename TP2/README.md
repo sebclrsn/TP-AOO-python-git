@@ -76,9 +76,7 @@ Implémentez une fonction ``calculate_moving_average(data: list[float], interval
 
 On définira la moyenne glissante comme:
 
-```math
-\bar{x_n} = \frac{1}{N} \sum_{k=n}^{n + N} x_{n-k}
-```
+> $\bar{x_n}$ = $\frac{1}{N}$ $\sum_{k=n}^{n + N}$ $x_{n-k}$
 
 où:
 - $\bar{x_n}$ désigne la moyenne glissante du n-ième terme
