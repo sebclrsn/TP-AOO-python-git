@@ -1,15 +1,18 @@
 repos:
+# outil pour trier et formatter les imports
 - repo: https://github.com/PyCQA/isort.git
   rev: 5.12.0
   hooks:
   - id: isort
     args: ["--profile", "black", "--line-length", "99"]
+# outil pour formatter le code
 - repo: https://github.com/psf/black
   rev: 22.10.0
   hooks:
   - id: black
     language_version: python3
     args: ["--line-length", "99"]
+# collection d'outils natifs
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v2.5.0
   hooks:

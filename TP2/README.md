@@ -21,11 +21,11 @@ Commencez par cloner ce dépôt:
 
 Commencez par configurer Git sur votre PC.
 
-Dans l'explorateur de fichiers, allez jusqu'à l'emplacement du dépôt téléchargé, puis ouvrir une console Git Bash avec un clic droit.
-
 ```bash
 # permet de pousser sur une branche qui n'est pas encore présente sur le dépôt distant
 git config --global push.autoSetupRemote true
+git config --global user.name "<Prenom> <NOM>"
+git config --global user.email "<VOTRE_EMAIL_UHA>"
 ```
 
 Ensuite, installez les packages Python qui seront nécessaires pour exécuter le programme:
@@ -81,9 +81,13 @@ Implémentez une fonction ``calculate_moving_average(data: list[float], interval
 
 On définira la moyenne glissante comme:
 
+<<<<<<< HEAD
 ```math
 \bar{x}_n = \frac{1}{N} \sum_{k=n}^{n + N} x_{n-k}
 ```
+=======
+$$\bar{x}_n = \frac{1}{N} \sum_{k=n}^{n + N} x_{n-k}$$
+>>>>>>> bb33425 (Ajout des commandes de config pour git)
 
 où:
 - $\bar{x}_n$ désigne la moyenne glissante du n-ième terme
