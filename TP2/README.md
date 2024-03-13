@@ -21,19 +21,11 @@ Commencez par cloner ce dépôt:
 
 Commencez par configurer Git sur votre PC.
 
-<<<<<<< HEAD
-Dans l'explorateur de fichiers, allez jusqu'à l'emplacement du dépôt téléchargé, puis ouvrir une console Git Bash avec un clic droit.
-
-```bash
-# permet de pousser sur une branche qui n'est pas encore présente sur le dépôt distant
-git config --global push.autoSetupRemote true
-=======
 ```bash
 # permet de pousser sur une branche qui n'est pas encore présente sur le dépôt distant
 git config --global push.autoSetupRemote true
 git config --global user.name "<Prenom> <NOM>"
 git config --global user.email "<VOTRE_EMAIL_UHA>"
->>>>>>> Add-TP2
 ```
 
 Ensuite, installez les packages Python qui seront nécessaires pour exécuter le programme:
