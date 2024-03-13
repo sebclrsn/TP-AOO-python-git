@@ -48,9 +48,14 @@ Créez une classe `Point` et une classe `Vector` de manière à représenter des
 Vérifier que la fonction `main` s'exécute sans erreurs et que les éléments affichés sont mathématiquements corrects.
 
 
+<<<<<<< HEAD
 #### 3.2 Produit scalaire et norme
 
 Ajouter une méthode qui calcule la norme d'un vecteur.
+=======
+#### 3.2 Produit scalaire
+
+>>>>>>> 26a889f (Person, Person2 and Vector)
 Ajouter une méthode qui calcule le produit scalaire de deux vecteurs.
 
 
@@ -61,6 +66,7 @@ Ajouter la méthode spéciale `__str__` aux deux classes. Résultat attendu :
 print(point_A)  # "Point(-2, -1)"
 print(vector_AB)  # "Vector(5, 8)"
 ```
+<<<<<<< HEAD
 Ajouter la méthode spéciale `__repr__` aux deux classes. Résultat attendu :
 ```sh
 print(f"{point_A = }")  # "Point(-2, -1)"
@@ -68,6 +74,8 @@ print(f"{vector_AB = }")  # "Vector(5, 8)"
 ```
 La différence est que `__str__` est une représentation textuelle **destinée aux utilisateurs** de la classe, alors que `__repr__` est **destinée aux développeurs**.
 Par défaut, `print` va utiliser `__str__`. Cependant, Python estime que la deuxième syntaxe est utilisé par des développeurs pour débugger. La classe sera donc affichée en utilisant `__repr__`. Dans notre cas, nous pouvons retourner le même texte pour les deux méthodes spéciales.
+=======
+>>>>>>> 26a889f (Person, Person2 and Vector)
 
 Ensuite, ajouter les méthodes séciales à la classe `Vector`:
 - `__add__`
@@ -80,13 +88,17 @@ Pour les annotations de types, on pourra utiliser le type `Self`
 ```py
 from typing import Self
 ```
+<<<<<<< HEAD
 ou bien utiliser `Vector` directement (dans ce cas, il sera nécessaire d'importer `from __future__ import annotations`).
+=======
+>>>>>>> 26a889f (Person, Person2 and Vector)
 
 #### 3.4 Constructeur alternatif
 
 On souhaite pouvoir créer un vecteur en donnant à l'initialisation seulement le point d'arrivé. Dans ce cas, le point de départ sera l'origine.
 On souhaite que ce code fonctionne :
 ```py
+<<<<<<< HEAD
 origin = Point.origin()  # Point(0, 0)
 vector_OB = Vector.from_points(point_A, point_B)
 ```
@@ -131,3 +143,9 @@ counter3_thread = Counter(20)  # count from 0 to 20 with 1s delay (1s is the def
 ```
 
 Vous devrez pour cela *overrider* la méthode `__init__`. Pensez à appeler `super()__init__()`.
+=======
+vector_OB = Vector.from_origin(point_B)
+```
+
+En utilisant une **méthode de class**, implémenter la méthode `from_origin` sur la classe `Vector`.
+>>>>>>> 26a889f (Person, Person2 and Vector)
