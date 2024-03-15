@@ -48,14 +48,9 @@ Créez une classe `Point` et une classe `Vector` de manière à représenter des
 Vérifier que la fonction `main` s'exécute sans erreurs et que les éléments affichés sont mathématiquements corrects.
 
 
-<<<<<<< HEAD
 #### 3.2 Produit scalaire et norme
 
 Ajouter une méthode qui calcule la norme d'un vecteur.
-=======
-#### 3.2 Produit scalaire
-
->>>>>>> 26a889f (Person, Person2 and Vector)
 Ajouter une méthode qui calcule le produit scalaire de deux vecteurs.
 
 
@@ -66,7 +61,6 @@ Ajouter la méthode spéciale `__str__` aux deux classes. Résultat attendu :
 print(point_A)  # "Point(-2, -1)"
 print(vector_AB)  # "Vector(5, 8)"
 ```
-<<<<<<< HEAD
 Ajouter la méthode spéciale `__repr__` aux deux classes. Résultat attendu :
 ```sh
 print(f"{point_A = }")  # "Point(-2, -1)"
@@ -74,8 +68,6 @@ print(f"{vector_AB = }")  # "Vector(5, 8)"
 ```
 La différence est que `__str__` est une représentation textuelle **destinée aux utilisateurs** de la classe, alors que `__repr__` est **destinée aux développeurs**.
 Par défaut, `print` va utiliser `__str__`. Cependant, Python estime que la deuxième syntaxe est utilisé par des développeurs pour débugger. La classe sera donc affichée en utilisant `__repr__`. Dans notre cas, nous pouvons retourner le même texte pour les deux méthodes spéciales.
-=======
->>>>>>> 26a889f (Person, Person2 and Vector)
 
 Ensuite, ajouter les méthodes séciales à la classe `Vector`:
 - `__add__`
@@ -88,10 +80,7 @@ Pour les annotations de types, on pourra utiliser le type `Self`
 ```py
 from typing import Self
 ```
-<<<<<<< HEAD
 ou bien utiliser `Vector` directement (dans ce cas, il sera nécessaire d'importer `from __future__ import annotations`).
-=======
->>>>>>> 26a889f (Person, Person2 and Vector)
 
 #### 3.4 Constructeur alternatif
 
@@ -148,4 +137,46 @@ vector_OB = Vector.from_origin(point_B)
 ```
 
 En utilisant une **méthode de class**, implémenter la méthode `from_origin` sur la classe `Vector`.
+<<<<<<< HEAD
 >>>>>>> 26a889f (Person, Person2 and Vector)
+=======
+
+
+## Exercice 4
+
+Utiliser [threads.py](./threads.py).
+
+#### 3.1 Exécuter et comprendre le code
+
+Jusqu'à présent, les programmes que nous avons écrit s'exécutaient dans un seul thread (le thread principale). Exécuter du code dans un thread différent permet d'exécuter ce code **en parallèle**.
+Il y a plusieurs manières de créer un thread en Python. Pour ce TP, nous allons nous créer une classe qui **hérite de `threading.Thread`**. `threading.Thread` contient plusieurs méthodes et attributs utiles :
+- `my_thread.is_alive()`: renvoie True si le thread est en cours d'exécution, False sinon
+- `my_thread.start()`: crée le thread et commence l'exécution du code de la méthode `run`
+- `my_thread.run()`: code exécuté dans le thread.
+- `my_thread.run()`: code exécuté dans le thread.
+- `my_thread.join()`: block l'exécution (attend) jusqu'á ce que `my_thread` ait fini (jusqu'à que ce `my_thread.run` ait fini).
+
+A noter qu'un thread ne peut être démarré qu'une seule fois !
+
+Lisez le code, exécutez-le et comprenez son fonctionnement. Vous pouvez changer les valeurs des `time.sleep` et observer le résultat.
+
+Resources pour aller plus loin après le TP :
+- https://realpython.com/intro-to-python-threading/
+
+#### 3.2 Factorisation
+
+Le code actuel contient plusieurs problèmes :
+- "magic values" pour 1s et 3s utilisés dans time.sleep(...)
+- "magic values" pour 1 et 3 utilisés dans for i in range(...)
+- duplications de code : les deux classes sont quasi identiques
+
+Factorisez ces deux classes en une seule pour enlever la duplication de code. Pour éviter d'hardcoder les valeurs cités plus haut, passez-les en paramètre de l'initialiseur.
+Exemple de code main:
+```py
+counter1_thread = Counter(stop_value=10, sleep_delay_s=1)  # count from 0 to 10 with 1s delay
+counter2_thread = Counter(50, 3)  # count from 0 to 50 with 3s delay
+counter3_thread = Counter(20)  # count from 0 to 20 with 1s delay (1s is the default)
+```
+
+Vous devrez pour cela *overrider* la méthode `__init__`. Pensez à appeler `super()__init__()`.
+>>>>>>> c521aac (Add threads exo)
