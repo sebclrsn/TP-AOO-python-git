@@ -105,7 +105,7 @@ Lisez le code, exécutez-le et comprenez son fonctionnement. Vous pouvez changer
 Resources pour aller plus loin après le TP :
 - https://realpython.com/intro-to-python-threading/
 
-#### 4.2 Factorisation
+#### 3.2 Factorisation
 
 Le code actuel contient plusieurs problèmes :
 - "magic values" pour 1s et 3s utilisés dans time.sleep(...)
