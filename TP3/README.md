@@ -148,7 +148,7 @@ Utiliser [threads.py](./threads.py).
 
 #### 3.1 Exécuter et comprendre le code
 
-Jusqu'à présent, les programmes que nous avons écrit s'exécutaient dans un seul thread (le thread principale). Exécuter du code dans un thread différent permet d'exécuter ce code **en parallèle**.
+Jusqu'à présent, les programmes que nous avons écrit s'exécutaient dans un seul thread (le thread principal). Exécuter du code dans un nouveau thread permet d'exécuter ce code **en parallèle**.
 Il y a plusieurs manières de créer un thread en Python. Pour ce TP, nous allons nous créer une classe qui **hérite de `threading.Thread`**. `threading.Thread` contient plusieurs méthodes et attributs utiles :
 - `my_thread.is_alive()`: renvoie True si le thread est en cours d'exécution, False sinon
 - `my_thread.start()`: crée le thread et commence l'exécution du code de la méthode `run`
