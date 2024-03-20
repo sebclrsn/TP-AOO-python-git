@@ -146,7 +146,7 @@ En utilisant une **méthode de class**, implémenter la méthode `from_origin` s
 
 Utiliser [threads.py](./threads.py).
 
-#### 3.1 Exécuter et comprendre le code
+#### 4.1 Exécuter et comprendre le code
 
 Jusqu'à présent, les programmes que nous avons écrit s'exécutaient dans un seul thread (le thread principal). Exécuter du code dans un nouveau thread permet d'exécuter ce code **en parallèle**.
 Il y a plusieurs manières de créer un thread en Python. Pour ce TP, nous allons nous créer une classe qui **hérite de `threading.Thread`**. `threading.Thread` contient plusieurs méthodes et attributs utiles :
