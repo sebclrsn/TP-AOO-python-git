@@ -2,6 +2,16 @@
 
 from __future__ import annotations
 
+class Point:
+    def __init__(self, x:float, y:float):
+        self.x=x
+        self.y=y
+class Vector:
+    def __init__(self, end:Point, start:Point):
+        self.end=end
+        self.start=start
+        self.x = end.x - start.x
+        self.y = end.y - start.y
 
 def main():
     origin = Point(0, 0)
@@ -47,3 +57,7 @@ if __name__ == "__main__":
     # main_2()
     # main_3()
     # main_4()
+
+
+
+
