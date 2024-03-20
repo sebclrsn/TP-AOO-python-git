@@ -1,6 +1,35 @@
 """Manipulation of 2D-vectors."""
 
 from __future__ import annotations
+import numpy as np
+from typing import Self
+
+class Point:
+    def __init__(self, x: float, y: float)-> None:
+        self.x = x
+        self.y = y
+
+    def str(self) -> float:
+        return f"{self.x} {self.y}"
+
+class Vector:
+    def __init__(self, begin: Point, end: Point)-> None:
+        self.beginpoint = begin
+        self.endpoint = end
+
+        self.x = end.x - begin.x
+        self.y = end.y - begin.y
+
+    def norm(self) -> float:
+        """retourne la norme d'un vecteur"""
+        return np.squrt (self.x **2 + self.y **2)
+
+    def dotprod(self, other: Vector) -> float:
+        return self.x * other.x + self.y * other.y
+
+    def add(self, other: Vector) -> Vector:
+        return Vector(Point(self.x, self.y),Point(self.x + other.x, self.y + other.y))
+
 
 
 def main():
@@ -19,8 +48,8 @@ def main():
 
 
 def main_2():
-    v = Vector(1, 2)
-    v2 = Vector(1, 0)
+    v = Vector(Point(0,0),Point(1,2))
+    v2 = Vector(Point(0,0),Point(1,0))
     print(v.dot_prod(v2))
     print(v2.dot_prod(v))
 
