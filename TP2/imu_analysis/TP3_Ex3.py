@@ -11,6 +11,8 @@ class Vector:
     def __init__(self, point_A: Point, point_B: Point):
         self.point_A = point_A
         self.point_B = point_B
+        self.x = point_A.x - point_B.x
+        self.y = point_A.y - point_B.y
 
 
 
