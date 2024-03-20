@@ -1,7 +1,35 @@
 """Manipulation of 2D-vectors."""
-
 from __future__ import annotations
+import typing
+import math
 
+
+
+class Point:
+    def __init__(self, x: float, y: float)-> None:
+        self.x = x
+        self.y = y
+
+    def __str__(self) -> float:
+        return f"{self.x} {self.y}"
+
+class Vector:
+    def __init__(self, begin: Point, end: Point)-> None:
+        self.begin_point = begin
+        self.end_point = end
+
+        self.x = end.x - begin.x
+        self.y = end.y - begin.y
+
+    def norm(self) -> float:
+        """retourne la norme d'un vecteur"""
+        return math.squrt(self.x **2 + self.y **2)
+
+    def dot_prod(self, other: Vector) -> float:
+        return self.x * other.x + self.y * other.y
+    
+    def __add__(self, other: Vector) -> Vector:
+        return Vector(Point(self.x, self.y),Point(self.x + other.x, self.y + other.y))
 
 def main():
     origin = Point(0, 0)
@@ -19,15 +47,15 @@ def main():
 
 
 def main_2():
-    v = Vector(1, 2)
-    v2 = Vector(1, 0)
+    v = Vector(Point(1, 2), Point(2, 2))
+    v2 = Vector(Point(1, 0), Point(10, 0))
     print(v.dot_prod(v2))
     print(v2.dot_prod(v))
 
 
 def main_3():
-    v = Vector(1, 2)
-    v2 = Vector(1, 0)
+    v = Vector(Point(1, 2), Point(2, 2))
+    v2 = Vector(Point(1, 0), Point(10, 0))
     print(-v)
     print(-(-v))
     print(v + v2)
@@ -44,6 +72,6 @@ def main_4():
 
 if __name__ == "__main__":
     main()
-    # main_2()
-    # main_3()
+    main_2()
+    main_3()
     # main_4()
