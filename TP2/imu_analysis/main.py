@@ -1,4 +1,5 @@
 from plotting import plot_angular_speed, plot_linear_acceleration, show_plots
+from processing import calculate_moving_average
 from reader import read_measurements_file
 
 
@@ -28,8 +29,16 @@ def main():
         ay.append(measurement.ay)
         az.append(measurement.az)
 
-    plot_angular_speed(t, wx, wy, wz)
-    plot_linear_acceleration(t, ax, ay, az)
+    t_liss = calculate_moving_average(t, 4)
+    wx_liss = calculate_moving_average(wx, 4)
+    wy_liss = calculate_moving_average(wy, 4)
+    wz_liss = calculate_moving_average(wz, 4)
+    ax_liss = calculate_moving_average(ax, 4)
+    ay_liss = calculate_moving_average(ay, 4)
+    az_liss = calculate_moving_average(az, 4)
+
+    plot_angular_speed(t_liss, wx_liss, wy_liss, wz_liss)
+    plot_linear_acceleration(t_liss, ax_liss, ay_liss, az_liss)
 
     show_plots()
 
