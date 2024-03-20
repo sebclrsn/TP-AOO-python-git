@@ -23,7 +23,7 @@ def main():
     print(f"Is Bob of age: {bob.is_of_age()}")
 
     print("Change the age of majority to 32")
-    # TODO
+    Person.AGE_MAJORITY = 32
 
     print(f"Is John of age: {john.is_of_age()}")
     print(f"Is Bob of age: {bob.is_of_age()}")
