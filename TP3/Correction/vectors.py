@@ -2,6 +2,43 @@
 
 from __future__ import annotations
 
+import math
+
+
+class Point:
+    def __init__(self, x: float, y: float) -> None:
+        self.x = x
+        self.y = y
+
+    @classmethod
+    def origin(cls) -> Point:
+        return Point(0, 0)
+
+    def __str__(self) -> str:
+        return f"Point({self.x}, {self.y})"
+
+
+class Vector:
+    def __init__(self, dx: float, dy: float) -> None:
+        self.dx = dx
+        self.dy = dx
+
+    @classmethod
+    def from_two_points(cls, tail: Point, head: Point) -> Vector:
+        return Vector(head.x - tail.x, head.y - head.y)
+
+    def magnitude(self) -> float:
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def dot_prod(self, other: Vector) -> float:
+        return self.dx * other.dx + self.dy * other.dy
+
+    def __str__(self) -> str:
+        return f"Vector({self.dx}, {self.dy})"
+
+    def __add__(self, other: Vector) -> Vector:
+        return Vector(self.dx + other.dx, self.dx + other.dx)
+
 
 def main():
     origin = Point.origin()
