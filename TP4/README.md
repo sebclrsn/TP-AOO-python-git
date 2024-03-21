@@ -71,17 +71,17 @@ A priori, cette tâche étant siple et nécessitant peu de code, **l'étape 3 : 
 
 Paramétrisez le test `test_value_error_is_raised_for_negative_input` et tester les valeurs : -1, -2, -10, -100
 
-# Tester la classe Vector
+# 3. Tester la classe ``Vector``
 
 L'objectif est de tester la classe `Vector` du TP3.
 
-Ouverz le fichier [TP3/test_vectors.py](../TP3/test_vectors.py) et complétez les tests.  **TODO LOIC**: en fait créer un petit package dans un sous dossier avec vectors.py, test_vectors.py, pytest_ini
+Ouverz le fichier [TP3/test_vectors.py](../TP3/test_vectors.py) et complétez les tests.
 
 Si vous avez besoin d'éxecuter un même test avec plusieurs combinaisons de valeurs, paramétrisez le test.
 
-A tout moment, vous pouvez visualiser la **couverture de test** (code coverage). Après votre premier lancement de pytest, ouvrer le rapport de coverage `coverage_report/index.html`. Ensuite, après chaque nouveau lancement de la commande pytest, vous pouvez simplement actualiser la page web dans votre navigateur.
+A tout moment, vous pouvez visualiser la **couverture de test** (code coverage). Pour cela, lancer (depuis le dossier TP3) `pytest --cov=. --cov-report=html --cov-report html:./coverage_report.html`. Ouvrer ensuite le le rapport de coverage `TP3/coverage_report/index.html`. Après chaque nouveau lancement de la commande pytest, vous pouvez simplement actualiser la page web dans votre navigateur.
 
-# Utilisation de mocks
+# 4. Utilisation de mocks
 
 On voudrait tester l'implémentation de l'éxercice "Météo" du TP1.
 Nous voulons tester que notre programme est bien capable d'extraire les bonnes informations des données renvoyées par l'API.
@@ -98,15 +98,39 @@ Nous ne voulons pas déclencher de vraies requêtes vers l'API du service OpenWe
 Pour cela, nous allons donc **patcher** la fonction `get` de `requests`. C'est-à-dire : à chaque fois que `request.get` sera appelé, python appelera notre fonction mock et non l'implémentation originale dans le package `requests`.
 
 Nous allons utiliser la fixture `monkey_patch` incluse avec `pytest`, mais sachez qu'il y a d'autres possibilités.
-[Documentation monkeypatch](https://docs.pytest.org/en/latest/how-to/monkeypatch.html)
 
-
-Voici un exemple d'utilisation de `monkey_patch.`
-### TODO snippet
+[Documentation monkeypatch](https://docs.pytest.org/en/latest/how-to/monkeypatch.html). Cette documentation donnes justement des exemples d'utilisation de monkeypatch pour patcher `requests.get` (section [Monkeypatching returned objects: buliding mock classes](https://docs.pytest.org/en/latest/how-to/monkeypatch.html#monkeypatching-returned-objects-building-mock-classes))
 
 Voici un exemple de ce que l'API renvoie :
-### TODO snippet
+```python
+{'base': 'stations',
+ 'clouds': {'all': 9},
+ 'cod': 200,
+ 'coord': {'lat': 44.34, 'lon': 10.99},
+ 'dt': 1707724928,
+ 'id': 3163858,
+ 'main': {'feels_like': 277.81,
+          'grnd_level': 918,
+          'humidity': 85,
+          'pressure': 1004,
+          'sea_level': 1004,
+          'temp': 277.81,
+          'temp_max': 279.43,
+          'temp_min': 276.6},
+ 'name': 'Zocca',
+ 'sys': {'country': 'IT',
+         'id': 2044440,
+         'sunrise': 1707718882,
+         'sunset': 1707755961,
+         'type': 2},
+ 'timezone': 3600,
+ 'visibility': 10000,
+ 'weather': [{'description': 'clear sky',
+              'icon': '01d',
+              'id': 800,
+              'main': 'Clear'}],
+ 'wind': {'deg': 194, 'gust': 2.03, 'speed': 1.23}}
+```
 
 1. Créez un module ``test_weather.py``
-1. Ajouter une fonction `get_mock` avec la même signature que `request.get` (càd les mêmes paramètres et le même type de retour)
-1. Ajouter une fonctoin `test_get_weather_info` dont le but est de tester la fonctoin `get_weather`. On patchera la fonction `request.get` avec `get_mock` dans ce test.
+1. Ajouter une fonction `test_get_weather_info` dont le but est de tester la fonction `get_weather`. On patchera la fonction `request.get` avec `get_mock` dans ce test^, exactement comme expliqué dans la documentation.
