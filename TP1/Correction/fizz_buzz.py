@@ -8,7 +8,7 @@ def fizz_buzz(number: int) -> str:
     FizzBuzz if divisible by both 3 and 5. Otherwise returns the input number as a string.
     """
     if number % 3 == 0 and number % 5 == 0:
-        return "FIzzBuzz"
+        return "FizzBuzz"
     if number % 3 == 0:
         return "Fizz"
     if number % 5 == 0:
