@@ -1,6 +1,7 @@
 """Implementation of a "Guess the number" game"""
 
 import random
+
 import utils
 
 NUMBER_TO_GUESS_MIN = 0

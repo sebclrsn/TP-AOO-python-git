@@ -1,6 +1,7 @@
 """Count the number of words in a file."""
 
 from collections import Counter
+
 import utils
 
 DEFAULT_WORD_TO_SEARCH = "python"

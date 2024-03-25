@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-
 CURRENT_DIR = Path.cwd().resolve()
 
 
