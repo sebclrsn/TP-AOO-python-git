@@ -12,8 +12,14 @@ def get_word_occurrence(text: str, word: str, case_sensitive: bool = False) -> i
     if not case_sensitive:
         text = text.lower()
         word = word.lower()
-    words_counter = Counter(text.split())
-    return words_counter.get(word, 0)
+
+    word_occurrence = 0
+    for line in text.split("\n"):
+        for word in line.split(" "):
+            if word == DEFAULT_WORD_TO_SEARCH:
+                word_occurrence += 1
+
+    return word_occurrence
 
 
 def main(word_to_search: str) -> None:
