@@ -1,4 +1,13 @@
-"""Manipulation of 2D-vectors."""
+"""Manipulation of 2D-vectors.
+
+Note :
+``from __future__ import annotations`` est nécessaire si l'on veut pouvoir utiliser une classe
+en tant qu'annotation de type dans cette même classe ! Comme dans l'exemple suivant :
+class Point:
+    @classmethod
+    def origin(cls) -> Point:  # "Error: Point not defined" serait levé sans l'utilisation de ``from __future__ import annotations``
+
+"""
 
 from __future__ import annotations
 
@@ -24,9 +33,10 @@ class Vector:
         self.dy = dx
 
     @classmethod
-    def from_two_points(cls, tail: Point, head: Point) -> Vector:
+    def from_points(cls, tail: Point, head: Point) -> Vector:
         return Vector(head.x - tail.x, head.y - head.y)
 
+    @property
     def magnitude(self) -> float:
         return math.sqrt(self.dx**2 + self.dy**2)
 
@@ -54,7 +64,7 @@ def main_2():
     v = Vector(1, 1)
     v2 = Vector(3, -2)
 
-    print(f"{v.magnitude() = }")
+    print(f"{v.magnitude = }")
     print(f"{v.dot_prod(v2) = }")
     print(f"{v2.dot_prod(v) = }")
 
@@ -76,9 +86,9 @@ def main_4():
     point_A = Point(-2, -1)
     point_B = Point(3, 7)
 
-    vector_AB = Vector.from_two_points(point_A, point_B)
-    vector_OA = Vector.from_two_points(origin, point_A)
-    vector_AB = Vector.from_two_points(point_A, point_B)
+    vector_AB = Vector.from_points(point_A, point_B)
+    vector_OA = Vector.from_points(origin, point_A)
+    vector_AB = Vector.from_points(point_A, point_B)
 
     print(f"Vector OA: dx={vector_OA.x} dy={vector_OA.y}")
     print(f"Vector AB: dx={vector_AB.x} dy={vector_AB.y}")

@@ -81,10 +81,10 @@ On souhaite pouvoir créer un vecteur en donnant à l'initialisation seulement l
 On souhaite que ce code fonctionne :
 ```py
 origin = Point.origin()  # Point(0, 0)
-vector_OB = Vector.from_two_points(point_A, point_B)
+vector_OB = Vector.from_points(point_A, point_B)
 ```
 
-En utilisant une **méthode de class**, implémenter la méthode `origin` sur la classe `Point` et `from_two_points` sur la classe `Vector`.
+En utilisant une **méthode de class**, implémenter la méthode `origin` sur la classe `Point` et `from_points` sur la classe `Vector`.
 
 
 ## Exercice 4

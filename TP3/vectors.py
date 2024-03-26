@@ -17,7 +17,7 @@ def main_2():
     v = Vector(1, 1)
     v2 = Vector(3, -2)
 
-    print(f"{v.magnitude() = }")
+    print(f"{v.magnitude() = }")  # or v.magnitude if using the @property decorator
     print(f"{v.dot_prod(v2) = }")
     print(f"{v2.dot_prod(v) = }")
 
@@ -39,9 +39,9 @@ def main_4():
     point_A = Point(-2, -1)
     point_B = Point(3, 7)
 
-    vector_AB = Vector.from_two_points(point_A, point_B)
-    vector_OA = Vector.from_two_points(origin, point_A)
-    vector_AB = Vector.from_two_points(point_A, point_B)
+    vector_AB = Vector.from_points(point_A, point_B)
+    vector_OA = Vector.from_points(origin, point_A)
+    vector_AB = Vector.from_points(point_A, point_B)
 
     print(f"Vector OA: dx={vector_OA.x} dy={vector_OA.y}")
     print(f"Vector AB: dx={vector_AB.x} dy={vector_AB.y}")
