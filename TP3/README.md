@@ -87,7 +87,6 @@ ou bien utiliser `Vector` directement (dans ce cas, il sera nécessaire d'import
 On souhaite pouvoir créer un vecteur en donnant à l'initialisation seulement le point d'arrivé. Dans ce cas, le point de départ sera l'origine.
 On souhaite que ce code fonctionne :
 ```py
-<<<<<<< HEAD
 origin = Point.origin()  # Point(0, 0)
 vector_OB = Vector.from_points(point_A, point_B)
 ```
@@ -132,51 +131,3 @@ counter3_thread = Counter(20)  # count from 0 to 20 with 1s delay (1s is the def
 ```
 
 Vous devrez pour cela *overrider* la méthode `__init__`. Pensez à appeler `super()__init__()`.
-=======
-vector_OB = Vector.from_origin(point_B)
-```
-
-En utilisant une **méthode de class**, implémenter la méthode `from_origin` sur la classe `Vector`.
-<<<<<<< HEAD
->>>>>>> 26a889f (Person, Person2 and Vector)
-=======
-
-
-## Exercice 4
-
-Utiliser [threads.py](./threads.py).
-
-#### 4.1 Exécuter et comprendre le code
-
-Jusqu'à présent, les programmes que nous avons écrit s'exécutaient dans un seul thread (le thread principal). Exécuter du code dans un nouveau thread permet d'exécuter ce code **en parallèle**.
-Il y a plusieurs manières de créer un thread en Python. Pour ce TP, nous allons nous créer une classe qui **hérite de `threading.Thread`**. `threading.Thread` contient plusieurs méthodes et attributs utiles :
-- `my_thread.is_alive()`: renvoie True si le thread est en cours d'exécution, False sinon
-- `my_thread.start()`: crée le thread et commence l'exécution du code de la méthode `run`
-- `my_thread.run()`: code exécuté dans le thread.
-- `my_thread.run()`: code exécuté dans le thread.
-- `my_thread.join()`: block l'exécution (attend) jusqu'á ce que `my_thread` ait fini (jusqu'à que ce `my_thread.run` ait fini).
-
-A noter qu'un thread ne peut être démarré qu'une seule fois !
-
-Lisez le code, exécutez-le et comprenez son fonctionnement. Vous pouvez changer les valeurs des `time.sleep` et observer le résultat.
-
-Resources pour aller plus loin après le TP :
-- https://realpython.com/intro-to-python-threading/
-
-#### 4.2 Factorisation
-
-Le code actuel contient plusieurs problèmes :
-- "magic values" pour 1s et 3s utilisés dans time.sleep(...)
-- "magic values" pour 1 et 3 utilisés dans for i in range(...)
-- duplications de code : les deux classes sont quasi identiques
-
-Factorisez ces deux classes en une seule pour enlever la duplication de code. Pour éviter d'hardcoder les valeurs cités plus haut, passez-les en paramètre de l'initialiseur.
-Exemple de code main:
-```py
-counter1_thread = Counter(stop_value=10, sleep_delay_s=1)  # count from 0 to 10 with 1s delay
-counter2_thread = Counter(50, 3)  # count from 0 to 50 with 3s delay
-counter3_thread = Counter(20)  # count from 0 to 20 with 1s delay (1s is the default)
-```
-
-Vous devrez pour cela *overrider* la méthode `__init__`. Pensez à appeler `super()__init__()`.
->>>>>>> c521aac (Add threads exo)
