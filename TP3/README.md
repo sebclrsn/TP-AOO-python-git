@@ -61,6 +61,13 @@ Ajouter la méthode spéciale `__str__` aux deux classes. Résultat attendu :
 print(point_A)  # "Point(-2, -1)"
 print(vector_AB)  # "Vector(5, 8)"
 ```
+Ajouter la méthode spéciale `__repr__` aux deux classes. Résultat attendu :
+```sh
+print(f"{point_A = }")  # "Point(-2, -1)"
+print(f"{vector_AB = }")  # "Vector(5, 8)"
+```
+La différence est que `__str__` est une représentation textuelle **destinée aux utilisateurs** de la classe, alors que `__repr__` est **destinée aux développeurs**.
+Par défaut, `print` va utiliser `__str__`. Cependant, Python estime que la deuxième syntaxe est utilisé par des développeurs pour débugger. La classe sera donc affichée en utilisant `__repr__`. Dans notre cas, nous pouvons retourner le même texte pour les deux méthodes spéciales.
 
 Ensuite, ajouter les méthodes séciales à la classe `Vector`:
 - `__add__`
