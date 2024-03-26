@@ -37,7 +37,7 @@ class Vector:
         return f"Vector({self.dx}, {self.dy})"
 
     def __add__(self, other: Vector) -> Vector:
-        return Vector(self.dx + other.dx, self.dx + other.dx)
+        return Vector(self.dx + other.dx, self.dy + other.dy)
 
 
 def main():
