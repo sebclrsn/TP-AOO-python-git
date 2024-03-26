@@ -28,9 +28,9 @@ class Point:
 
 
 class Vector:
-    def __init__(self, dx: float, dy: float) -> None:
-        self.dx = dx
-        self.dy = dx
+    def __init__(self, x: float, y: float) -> None:
+        self.x = x
+        self.y = y
 
     @classmethod
     def from_points(cls, tail: Point, head: Point) -> Vector:
@@ -38,16 +38,16 @@ class Vector:
 
     @property
     def magnitude(self) -> float:
-        return math.sqrt(self.dx**2 + self.dy**2)
+        return math.sqrt(self.x**2 + self.y**2)
 
     def dot_prod(self, other: Vector) -> float:
-        return self.dx * other.dx + self.dy * other.dy
+        return self.x * other.x + self.y * other.y
 
     def __str__(self) -> str:
-        return f"Vector({self.dx}, {self.dy})"
+        return f"Vector({self.x}, {self.y})"
 
     def __add__(self, other: Vector) -> Vector:
-        return Vector(self.dx + other.dx, self.dy + other.dy)
+        return Vector(self.x + other.x, self.y + other.y)
 
 
 def main():
