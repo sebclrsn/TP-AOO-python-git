@@ -48,8 +48,9 @@ Créez une classe `Point` et une classe `Vector` de manière à représenter des
 Vérifier que la fonction `main` s'exécute sans erreurs et que les éléments affichés sont mathématiquements corrects.
 
 
-#### 3.2 Produit scalaire
+#### 3.2 Produit scalaire et norme
 
+Ajouter une méthode qui calcule la norme d'un vecteur.
 Ajouter une méthode qui calcule le produit scalaire de deux vecteurs.
 
 
@@ -72,16 +73,18 @@ Pour les annotations de types, on pourra utiliser le type `Self`
 ```py
 from typing import Self
 ```
+ou bien utiliser `Vector` directement (dans ce cas, il sera nécessaire d'importer `from __future__ import annotations`).
 
 #### 3.4 Constructeur alternatif
 
 On souhaite pouvoir créer un vecteur en donnant à l'initialisation seulement le point d'arrivé. Dans ce cas, le point de départ sera l'origine.
 On souhaite que ce code fonctionne :
 ```py
-vector_OB = Vector.from_origin(point_B)
+origin = Point.origin()  # Point(0, 0)
+vector_OB = Vector.from_points(point_A, point_B)
 ```
 
-En utilisant une **méthode de class**, implémenter la méthode `from_origin` sur la classe `Vector`.
+En utilisant une **méthode de class**, implémenter la méthode `origin` sur la classe `Point` et `from_points` sur la classe `Vector`.
 
 
 ## Exercice 4
