@@ -28,9 +28,9 @@ class Point:
 
 
 class Vector:
-    def __init__(self, x: float, y: float) -> None:
-        self.x = x
-        self.y = y
+    def __init__(self, x_coordinate: float, y_coordinate: float) -> None:
+        self.x = x_coordinate
+        self.y = y_coordinate
 
     @classmethod
     def from_points(cls, tail: Point, head: Point) -> Vector:
