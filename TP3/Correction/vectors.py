@@ -28,7 +28,7 @@ class Vector:
         return Vector(head.x - tail.x, head.y - head.y)
 
     def magnitude(self) -> float:
-        return math.sqrt(self.x**2 + self.y**2)
+        return math.sqrt(self.dx**2 + self.dy**2)
 
     def dot_prod(self, other: Vector) -> float:
         return self.dx * other.dx + self.dy * other.dy
